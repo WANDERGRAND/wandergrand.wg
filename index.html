@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANDERGRAND - Moteur de Jeu & Éditeur 3D</title>
+    <style>
+        :root {
+            --bg-color: #0b0b12;
+            --panel-color: #13131f;
+            --border-color: #ff2a85;
+            --accent-cyan: #00f0ff;
+            --accent-pink: #ff2a85;
+            --text-color: #e0e0e0;
+            --text-dim: #8b8b9e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--panel-color);
+            border-bottom: 2px solid var(--accent-pink);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, var(--accent-cyan), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .hero {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at center, #1c1330 0%, var(--bg-color) 70%);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255, 42, 133, 0.4);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-pink), #8b005d);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(255, 42, 133, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.7);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--panel-color);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 6px;
+            padding: 2rem;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-cyan);
+        }
+
+        .card h3 {
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--panel-color);
+            color: var(--text-dim);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>WANDERGRAND</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#moteur">Moteur</a></li>
+                <li><a href="#wgscript">WGScript</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <h2>Créez vos mondes sans limites</h2>
+        <p>Un moteur de jeu 3D haute performance combiné à un éditeur moderne et intuitif propulsé par WGScript.</p>
+        <a href="#moteur" class="btn">Découvrir le Moteur</a>
+    </section>
+
+    <div class="container" id="moteur">
+        <div class="features">
+            <div class="card">
+                <h3>Éditeur 3D Avancé</h3>
+                <p>Un espace de travail complet inspiré des meilleurs standards, avec gestion des nœuds, inspecteur dynamique et outils de manipulation de scènes précis.</p>
+            </div>
+            <div class="card" id="wgscript">
+                <h3>WGScript</h3>
+                <p>Un langage de script intégré, rapide et sur-mesure conçu pour maximiser le contrôle de vos scripts et de vos mécaniques de jeu.</p>
+            </div>
+            <div class="card">
+                <h3>Gestion de Projets</h3>
+                <p>Organisez, importez et lancez vos créations en un clin d'œil grâce au gestionnaire de projets intégré au moteur.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WANDERGRAND - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
