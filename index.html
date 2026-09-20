@@ -105,6 +105,48 @@
             box-shadow: 0 0 20px rgba(0, 240, 255, 0.7);
         }
 
+        .engine-showcase {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2rem 4rem;
+        }
+
+        .engine-showcase-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .engine-showcase-header h3 {
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .engine-showcase-header p {
+            color: var(--text-dim);
+        }
+
+        .engine-image {
+            display: block;
+            width: 100%;
+            max-height: 620px;
+            object-fit: cover;
+            object-position: center;
+            border: 1px solid rgba(255, 42, 133, 0.65);
+            border-radius: 8px;
+            box-shadow:
+                0 0 25px rgba(255, 42, 133, 0.18),
+                0 0 50px rgba(0, 240, 255, 0.08);
+            background: #050509;
+        }
+
+        .engine-caption {
+            text-align: center;
+            margin-top: 0.9rem;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -164,6 +206,19 @@
         <h2>Créez vos mondes sans limites</h2>
         <p>Un moteur de jeu 3D haute performance combiné à un éditeur moderne et intuitif propulsé par WGScript.</p>
         <a href="#moteur" class="btn">Découvrir le Moteur</a>
+    </section>
+
+    <section class="engine-showcase" aria-label="Aperçu de WANDERGRAND Engine">
+        <div class="engine-showcase-header">
+            <h3>WANDERGRAND Engine</h3>
+            <p>Découvrez l'éditeur actuellement en développement.</p>
+        </div>
+        <img
+            class="engine-image"
+            src="Engine.png"
+            alt="Capture d'écran de l'éditeur 3D WANDERGRAND Engine"
+        >
+        <p class="engine-caption">Version en développement — l'éditeur évolue encore.</p>
     </section>
 
     <div class="container" id="moteur">
